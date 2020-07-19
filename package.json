@@ -6,8 +6,8 @@
   "main": "electron/main.js",
   "browser": "src/app.js",
   "scripts": {
-    "start": "parcel index.html --port 3000",
-    "build": "parcel build index.html",
+    "start": "index.html --port 3000",
+    "build": "build index.html",
     "build:registry": "curl https://rawgit.com/KhronosGroup/glTF-Generator-Registry/master/registry.json -o lib/gltf-generator-registry.json",
     "package": "npm run package:windows && npm run package:mac && npm run package:linux",
     "package:windows": "electron-packager . gltf-viewer --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/glTF-Viewer.ico --out=package --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"glTF Viewer\"",
@@ -17,7 +17,6 @@
     "dev:electron": "concurrently \"parcel watch index.html\" \"npm start\"",
     "test": "node scripts/gen_test.js",
     "deploy": "npm run build && now dist --local-config now.json --prod",
-    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "gltf",
