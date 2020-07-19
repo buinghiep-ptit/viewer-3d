@@ -6,7 +6,7 @@
   "main": "electron/main.js",
   "browser": "src/app.js",
   "scripts": {
-   // "dev": "electron .",
+    "dev": "electron .",
     "start": "parcel index.html --port 3000",
     "build": "parcel build index.html",
     "build:registry": "curl https://rawgit.com/KhronosGroup/glTF-Generator-Registry/master/registry.json -o lib/gltf-generator-registry.json",
